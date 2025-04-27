@@ -1,0 +1,122 @@
+
+body{
+
+  margin: 0;
+  font-family: "Playwrite VN", serif;
+  color: rgb(4, 3, 3);
+}
+
+a{
+  text-decoration: none;
+  
+}
+
+.grid_container{
+
+  display: grid;
+  grid-template-areas:
+   "navbar navbar"  /* first row */
+   "categories main" /* second row */
+   "footer footer";  /*third row*/
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns:  1fr 3fr ;
+  min-height: 100vh;
+}
+
+.navbar{
+
+  grid-area: navbar;
+  background-color: rgb(101, 8, 8);
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+nav a{
+  margin-right: 15px;
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+}
+
+.categories{
+
+  grid-area: categories;
+  background-color: rgba(213, 218, 213, 0.866);
+  padding: 20px;
+}
+
+.categories ul{
+
+  list-style: none;
+  padding: 0;
+  
+}
+
+.categories ul li a{
+  color: rgb(13, 13, 13);
+}
+
+
+
+.main {
+
+  padding: 20px;
+  background-color: white;
+}
+
+.main .product_grid{
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.product {
+  background-color: #fff;
+  border: 2px solid #ddd;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.product img {
+  max-width: 80%;
+  height: 200px;
+}
+
+.product h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+.product p {
+  color: rgb(46, 46, 46);
+}
+
+.product .price {
+  color: rgba(199, 20, 56, 0.731);
+  font-weight: bold;
+}
+
+button {
+  background-color: rgba(199, 20, 56, 0.731);
+  color: white;
+  border: none;
+  font-size: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+
+.footer{
+
+  grid-area: footer;
+  background-color: rgb(101, 8, 8);;
+  text-align: center;
+  color: white 
+  ;
+}
